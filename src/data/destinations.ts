@@ -1,0 +1,266 @@
+export type Destination = {
+  id: string;
+  name: string;
+  country: string;
+  address: string;
+  description: string;
+  short: string;
+  image: string;
+  coordinates: { lat: number; lng: number };
+  tags: string[];
+  rating: number;
+};
+
+export const DESTINATIONS: Destination[] = [
+  {
+    id: "1",
+    name: "The Literary Coffee House 'Citadel'",
+    country: "România",
+    address: "Str. Academiei, Nr. 15, Bucharest",
+    short: "A quiet place, ideal for reading and study sessions. Excellent espresso.",
+    description:
+      "A quiet place, ideal for reading and study sessions. Excellent espresso.",
+    image: "https://images.unsplash.com/photo-1435224654926-ecc9f7fa028c",
+    coordinates: { lat: 44.4363, lng: 26.1018 },
+    tags: ["coffee", "reading", "quiet"],
+    rating: 4.8
+  },
+  {
+    id: "2",
+    name: "Restaurant 'The Old Inn'",
+    country: "România",
+    address: "Piața Unirii, Nr. 4, Cluj-Napoca",
+    short: "Traditional Romanian dishes, generous servings, and live folk music.",
+    description:
+      "Traditional Romanian dishes, generous servings, and live folk music.",
+    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+    coordinates: { lat: 46.7709, lng: 23.5891 },
+    tags: ["restaurant", "traditional", "music"],
+    rating: 4.5
+  },
+  {
+    id: "3",
+    name: "The Global Wok Bistro",
+    country: "România",
+    address: "Bulevardul Eroilor, Nr. 8, Timișoara",
+    short: "Fast and tasty Asian food, a favorite among Polytechnic students.",
+    description: "Fast and tasty Asian food, a favorite among students.",
+    image: "https://images.unsplash.com/photo-1505483531331-fc3cf89fd382",
+    coordinates: { lat: 45.7537, lng: 21.2257 },
+    tags: ["asian", "bistro", "fast-food"],
+    rating: 4.2
+  },
+  {
+    id: "4",
+    name: "Café 'New World'",
+    country: "România",
+    address: "Str. Lăpușneanu, Nr. 12, Iași",
+    short: "Modern design, perfect for a relaxed brunch. They have the best cakes.",
+    description:
+      "Modern design, perfect for a relaxed brunch. Known for excellent cakes and patisserie.",
+    image: "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f",
+    coordinates: { lat: 47.1601, lng: 27.5794 },
+    tags: ["cafe", "brunch", "cakes"],
+    rating: 4.7
+  },
+  {
+    id: "5",
+    name: "Pizzeria 'Il Drago'",
+    country: "România",
+    address: "Str. Nicolae Bălcescu, Nr. 20, Brașov",
+    short: "Wood-fired oven pizza, authentic Italian ingredients. Excellent for groups.",
+    description:
+      "Wood-fired oven pizza, authentic Italian ingredients. Great for groups and family meals.",
+    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+    coordinates: { lat: 45.6429, lng: 25.5888 },
+    tags: ["pizzeria", "pizza", "group"],
+    rating: 4.6
+  },
+  {
+    id: "6",
+    name: "Vegan Restaurant 'The Green Garden'",
+    country: "România",
+    address: "Splaiul Independenței, Nr. 300, Bucharest",
+    short: "Healthy, plant-based options. Fresh smoothies and delicious cream soups.",
+    description:
+      "Healthy, plant-based options with fresh smoothies and creative seasonal dishes.",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    coordinates: { lat: 44.4379, lng: 26.0463 },
+    tags: ["vegan", "healthy", "smoothies"],
+    rating: 4.9
+  },
+  {
+    id: "7",
+    name: "Coffee Shop 'By The Faculty'",
+    country: "România",
+    address: "Str. Observatorului, Nr. 17, Cluj-Napoca",
+    short: "Strategic location near the campus. Quick and affordable student lunch menu.",
+    description:
+      "Strategic location near the campus. Quick service and an affordable student menu.",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    coordinates: { lat: 46.7570, lng: 23.5786 },
+    tags: ["coffee", "student", "affordable"],
+    rating: 4.0
+  },
+  {
+    id: "8",
+    name: "Burger Shack",
+    country: "România",
+    address: "Calea Moșilor, Nr. 250, Bucharest",
+    short: "The best artisanal burgers in town, featuring Black Angus beef.",
+    description: "Artisanal burgers with high-quality beef and creative toppings.",
+    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+    coordinates: { lat: 44.4449, lng: 26.1103 },
+    tags: ["burger", "fast-food", "artisanal"],
+    rating: 4.4
+  },
+  {
+    id: "9",
+    name: "Tea House 'Sunset'",
+    country: "România",
+    address: "Str. George Enescu, Nr. 3, Sibiu",
+    short: "An oasis of calm with over 50 types of tea and ambient music.",
+    description: "An oasis of calm with an extensive tea selection and cozy atmosphere.",
+    image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e",
+    coordinates: { lat: 45.7958, lng: 24.1528 },
+    tags: ["tea", "relax", "calm"],
+    rating: 4.7
+  },
+  {
+    id: "10",
+    name: "Restaurant Pescaresc 'The Sea'",
+    country: "România",
+    address: "Bulevardul Mamaia, Nr. 200, Constanța",
+    short: "Fresh fish and seafood specialties, with a view of the sea.",
+    description: "Fresh fish and seafood specialties, great sea views and a relaxed terrace.",
+    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+    coordinates: { lat: 44.1751, lng: 28.6367 },
+    tags: ["seafood", "restaurant", "sea-view"],
+    rating: 4.5
+  },
+  {
+    id: "11",
+    name: "Bistro 'At The Forest'",
+    country: "România",
+    address: "Aleea Parcului, Nr. 7, Oradea",
+    short: "International menu, green terrace. Ideal for a romantic dinner.",
+    description:
+      "International menu with a pleasant green terrace — ideal for romantic dinners.",
+    image: "https://images.unsplash.com/photo-1465101162946-4377e57745c3",
+    coordinates: { lat: 47.0506, lng: 21.9161 },
+    tags: ["bistro", "romantic", "terrace"],
+    rating: 4.3
+  },
+  {
+    id: "12",
+    name: "Gaming Coffee Shop 'Restart'",
+    country: "România",
+    address: "Strada Vasile Alecsandri, Nr. 5, Galați",
+    short: "Board games, consoles, and coffee. An excellent place for socializing.",
+    description:
+      "Board games, consoles, and specialty coffee — a social spot for gamers and groups.",
+    image: "https://images.unsplash.com/photo-1500534623283-312aade485b7",
+    coordinates: { lat: 45.4385, lng: 28.0559 },
+    tags: ["coffee", "gaming", "social"],
+    rating: 4.1
+  },
+  {
+    id: "13",
+    name: "Trattoria 'Bella Vita'",
+    country: "România",
+    address: "Bulevardul Carol I, Nr. 18, Craiova",
+    short: "Homemade pasta and Italian wines. Mediterranean atmosphere.",
+    description: "Homemade pasta, Italian wines and a warm Mediterranean atmosphere.",
+    image: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564",
+    coordinates: { lat: 44.3297, lng: 23.8 },
+    tags: ["italian", "trattoria", "pasta"],
+    rating: 4.6
+  },
+  {
+    id: "14",
+    name: "Bread and Coffee",
+    country: "România",
+    address: "Strada Republicii, Nr. 10, Ploiești",
+    short: "Artisanal bakery with specialty coffees. Ideal for breakfast.",
+    description: "Artisanal bakery offering specialty coffees and fresh pastries for breakfast.",
+    image: "https://images.unsplash.com/photo-1435224654926-ecc9f7fa028c",
+    coordinates: { lat: 44.9450, lng: 26.0315 },
+    tags: ["bakery", "coffee", "breakfast"],
+    rating: 4.8
+  },
+  {
+    id: "15",
+    name: "Fast-Food 'Döner King'",
+    country: "România",
+    address: "Calea Șagului, Nr. 55, Timișoara",
+    short: "Döner Kebab and Shawarma. Quick and filling option after classes.",
+    description: "Quick döner kebab and shawarma — a popular fast-food choice near campuses.",
+    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+    coordinates: { lat: 45.7275, lng: 21.2188 },
+    tags: ["fast-food", "kebab", "shawarma"],
+    rating: 3.9
+  },
+  {
+    id: "16",
+    name: "Restaurant 'The Citadel'",
+    country: "România",
+    address: "Strada Mureșenilor, Nr. 1, Târgu Mureș",
+    short: "Traditional Transylvanian food, next to the Medieval Citadel.",
+    description: "Traditional Transylvanian food served near the Medieval Citadel.",
+    image: "https://images.unsplash.com/photo-1505483531331-fc3cf89fd382",
+    coordinates: { lat: 46.5459, lng: 24.5623 },
+    tags: ["restaurant", "traditional", "transylvanian"],
+    rating: 4.4
+  },
+  {
+    id: "17",
+    name: "Smoothie Bar 'Energy'",
+    country: "România",
+    address: "Bulevardul 1 Decembrie 1918, Nr. 100, Alba Iulia",
+    short: "Smoothies, natural juices, and acai bowls for an energy boost.",
+    description:
+      "Fresh smoothies, natural juices and acai bowls — a healthy stop for a quick boost.",
+    image: "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f",
+    coordinates: { lat: 46.0683, lng: 23.5855 },
+    tags: ["smoothie", "healthy", "juice"],
+    rating: 4.9
+  },
+  {
+    id: "18",
+    name: "Restaurant 'Grandma's House'",
+    country: "România",
+    address: "Strada Republicii, Nr. 45, Brașov",
+    short: "Fixed (lunch) menu, cheap and tasty, just like home.",
+    description: "Homestyle fixed lunch menus — cheap, hearty and tasty meals.",
+    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+    coordinates: { lat: 45.6425, lng: 25.5880 },
+    tags: ["homestyle", "lunch", "comfort-food"],
+    rating: 4.3
+  },
+  {
+    id: "19",
+    name: "Irish Pub 'The Shamrock'",
+    country: "România",
+    address: "Strada Universității, Nr. 9, Iași",
+    short: "Craft beer, quiz nights, and live sports. Popular student spot.",
+    description:
+      "Craft beers, quiz nights and live sports screenings — a lively student-friendly pub.",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    coordinates: { lat: 47.1633, lng: 27.5790 },
+    tags: ["pub", "beer", "music"],
+    rating: 4.5
+  },
+  {
+    id: "20",
+    name: "Coffee Shop 'Zen'",
+    country: "România",
+    address: "Strada Dorobanților, Nr. 80, Cluj-Napoca",
+    short: "Minimalist design, specialty coffee, and relaxing background music.",
+    description:
+      "Minimalist design and specialty coffees with a calm atmosphere for work or relaxing.",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    coordinates: { lat: 46.7770, lng: 23.6067 },
+    tags: ["coffee", "specialty", "minimalist"],
+    rating: 4.7
+  }
+];
