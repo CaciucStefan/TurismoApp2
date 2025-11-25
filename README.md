@@ -18,15 +18,3 @@ Aplicație mobilă de turism construită cu **React Native** și **Expo** pentru
 - npm sau yarn
 - Expo CLI
 
-### Instalare
-
-```bash
-# Clone repo
-git clone https://github.com/USERNAME/turismo-app-hackathon.git
-cd turismo-app-hackathon
-
-# Instalează dependințe
-npm install
-
-# Pornește aplicația
-npm start
